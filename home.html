@@ -1,0 +1,1233 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Eventura</title>
+    <link rel="shortcut icon" type="image/png" href="images/logo2.png" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons (REQUIRED for bi icons) -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <!-- AOS  -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <style type="text/css">
+
+      body{
+        background-color: #062036;
+      }
+      
+      .head-text{
+        font-size: 73px; 
+        padding-bottom: 30px; 
+        padding-top: 70px; 
+        font-family: Cinzel;
+      }
+
+      .head-para{
+        line-height: 40px; 
+        font-size: 20px; 
+        margin-bottom: 20px
+      }
+
+      .image-collage {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.image-collage img {
+  width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+/* Individual heights */
+.img1 {
+  height: 350px;
+}
+
+.img2 {
+  height: 250px;
+  margin-left: -5px;
+  /* margin-top: 10px; */
+}
+
+.img3 {
+  height: 260px;
+  margin-top: -6px;
+}
+
+.img4 {
+  height: 360px;
+  margin-top: -106px;
+  margin-left: -5px;
+}
+
+@media (max-width: 768px){
+  .img1 {
+  height: 250px;
+}
+
+.img2 {
+  height: 170px;
+  margin-left: -5px;
+  /* margin-top: 10px; */
+}
+
+.img3 {
+  height: 190px;
+  margin-top: -6px;
+}
+
+.img4 {
+  height: 270px;
+  margin-top: -86px;
+  margin-left: -5px;
+  }
+}
+
+@media (max-width: 567px){
+  .img1 {
+  height: 180px;
+}
+
+.img2 {
+  height: 120px;
+  margin-left: -5px;
+  /* margin-top: 10px; */
+}
+
+.img3 {
+  height: 130px;
+  margin-top: -9px;
+}
+
+.img4 {
+  height: 190px;
+  margin-top: -68px;
+  margin-left: -5px;
+  }
+}
+
+
+      
+
+      #explore-service {
+        color: white; 
+        font-size: bold
+      }
+
+      #explore-service:hover{
+        background-color: #041c32;
+        opacity: 0.8;
+      }
+
+      @media (max-width: 768px){
+        .head-text{
+          font-size: 50px;
+          padding-top: 17px;
+          margin-bottom: 0;
+        }
+        .head-para{
+          font-size: 16px;
+        }
+
+      }
+
+      @media(max-width: 567px){
+        .head-text{
+          font-size: 43px;
+          margin-top: 35px;
+          margin-bottom: 0;
+        }
+
+        .head-para{
+          font-size: 15px;
+        }
+      }
+
+
+      /* Founder Section */
+
+      .eventura-hero {
+  background: #f1d49b;
+  padding: 90px 0 70px;
+  /* background: linear-gradient(
+    135deg,
+    #f1d49b,
+    #855c0b
+  ); */
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+/* Founder */
+.founder {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.founder img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.founder span {
+  font-size: 14px;
+  color: #444;
+}
+
+/* Headline */
+.hero-content h1 {
+  font-size: 56px;
+  line-height: 1.15;
+  color: #062036;
+  margin-bottom: 20px;
+}
+
+/* Description */
+.hero-desc {
+  max-width: 420px;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* Button */
+.hero-btn {
+  display: inline-block;
+  background: #062036;
+  color: #fff;
+  padding: 14px 28px;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.hero-btn:hover {
+  background: #041526;
+  color: #ccc;
+}
+
+/* Image */
+.hero-image img {
+  width: 100%;
+  border-radius: 26px;
+  object-fit: cover;
+}
+
+/* Stats */
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-top: 60px;
+}
+
+/* .stat-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(10px);
+  border-radius: 22px;
+  padding: 22px;
+  text-align: center;
+} */
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.18); /* glass transparency */
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px); /* Safari support */
+
+  border-radius: 22px;
+  padding: 22px;
+  text-align: center;
+
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 8px 32px rgba(6, 32, 54, 0.12);
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 14px 40px rgba(6, 32, 54, 0.18);
+}
+
+
+.stat-card h3 {
+  font-size: 28px;
+  color: #062036;
+  margin-bottom: 6px;
+}
+
+.stat-card p {
+  font-size: 13px;
+  color: #666;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content h1 {
+    font-size: 42px;
+  }
+
+  .hero-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+      section {
+        background-color: #062036;
+        padding-top: 50px;
+        padding-bottom: 70px;
+      }
+
+      .service-card {
+        border: none;
+        border-radius: 15px;
+        overflow: hidden;
+        /* box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; */
+      }
+
+      .service-card:hover{
+        transform: translateY(-8px);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .service-card img {
+        border-radius: 15px 15px 0 0;
+      }
+
+      .card-body {
+        background-color: #f1d49b;
+        color: #062036;
+      }
+
+      .btn-explore {
+        background-color: #062036;
+        color: white;
+        border-radius: 10px;
+        
+        /* margin-top: 15px; */
+      }
+
+      
+      .btn-explore:hover {
+          /* opacity: 0.9; */
+          color: #ccc;
+          background: #041526;
+          
+      }
+
+      /* Banner Section */
+
+      .banner {
+        background: linear-gradient(135deg, #041c32, #e0bc74);
+        padding: 80px;
+      }
+
+      .banner-title {
+        font-family: Cinzel;
+        font-weight: 700;
+        font-size: 48px;
+        color: #e0bc74;
+        margin-bottom: 25px;
+      }
+
+      .banner-text {
+        color: white;
+      }
+
+      .banner-highlight {
+        font-size: 20px;
+        font-weight: 600;
+        color: #ffffff;
+        margin-bottom: 30px;
+        font-family:  Cursive;
+        color: #fffaf2;
+      }
+
+      .btn-warn {
+        background-color: #e0bc74;
+        border: none;
+      }
+
+      .btn-warn:hover {
+        background-color: #d6aa5f;
+      }
+
+      .banner-image {
+        background-size: cover;
+        width:350px;
+        height: 350px;
+        border-radius: 30px;
+        box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+      }
+
+      @media (max-width: 768px){
+
+        .banner{
+          padding: 80px;
+        }
+
+        .banner-title{
+          font-size: 34px;
+        }
+        .banner-image{
+          margin: 15%;
+        }
+      }
+
+      @media (max-width: 576px){
+        
+        .banner{
+          padding: 20px;
+          
+        }
+
+        .banner-title{
+          font-size: 30px;
+          margin-top: 30px;
+        }
+
+        .banner-text{
+          font-size: 14px;
+        }
+
+        .banner-highlight{
+          font-size: 14px;
+        }
+        .banner-image{
+          margin: 0;
+          padding-top: 20px;
+        }
+      }
+
+      /* Client testmonials */
+
+      .client{
+          background: radial-gradient(circle,
+            rgba(224, 188, 116, 0.8) 18%,
+            rgba(6, 32, 54, 0.95) 82%
+           );
+
+          text-align: center;
+      }
+
+      .client h2{
+        text-transform: capitalize;
+        color: #062036;
+        font-family: Cinzel;
+        font-weight: 700;
+        font-size: 48px;
+      }
+
+      .client-card{
+        /* background-color: rgb(209, 208, 208); */
+        background-color: #fff;
+        box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+        opacity: 0.85;
+      }
+
+
+      .client-card:hover{
+        opacity: 0.98;
+       
+      }
+
+
+      .stars{
+        margin: 15px;
+      }
+
+
+      .stars i {
+        color: #e1af4a;   /* gold */
+        font-size: 28px;
+        margin-right: 3px;
+      }
+
+      .profile-image{
+        width:100px;
+        height: 100px;
+        background-size: cover;
+        border-radius: 50%;
+        margin-left: 38%;
+        margin-top: 20px;
+        margin-bottom: 20px ;        
+      }
+
+      .client .card-para{
+        font-style: italic;
+        padding: 10px;
+        
+      }
+
+      .client .card-title{
+        color: #062036;
+      }
+      .client .card-text{
+        color: gray;
+      }
+
+      .hero-section {
+  background: #062036; /* or your background image */
+}
+
+/* TEXT */
+.hero-title {
+  font-size: 70px;
+  font-family: Cinzel;
+  margin-bottom: 30px;
+}
+
+.hero-desc {
+  font-size: 20px;
+  line-height: 38px;
+}
+
+/* IMAGE GRID */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+
+.image-grid img {
+  width: 100%;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .hero-title {
+    font-size: 48px;
+  }
+
+  .hero-desc {
+    font-size: 18px;
+    line-height: 32px;
+  }
+
+  .image-grid img {
+    height: 240px;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 34px;
+    padding-top: 20px;
+  }
+
+  .hero-desc {
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  .image-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .image-grid img {
+    height: 220px;
+  }
+}
+
+    </style>
+  </head>
+  <body>
+    <!-- Navbar section -->
+
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top"
+      style="background-color: #062036"
+    >
+      <!-- rgb(13, 13, 58); -->
+
+      <img src="images/logo2.png" style="width: 100px; height: 80px" alt="Logo" />
+      <h1
+        class="navbar-brand"
+        style="font-family: Cinzel; font-size: x-large; color: white"
+      >
+        EVENTURA
+      </h1>
+
+      <!-- mobile size (responsive hamburger icon invoking) -->
+
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarItems"
+        aria-controls="navbarItems"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarItems">
+        <ul class="navbar-nav hover-overlay ms-auto">
+          <li class="nav-item">
+            <a href="home.html" class="nav-link active" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="event.html" class="nav-link">Events</a>
+          </li>
+          <li class="nav-item">
+            <a href="category.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">Our Story</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="book-now.html"
+              class="btn btn-warning"
+              id="book-now"
+              >Book Now</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Section -->
+    <section class="container">
+      <div class="container py-0 py-md-4">
+        <div class="row align-items-top">
+          <div class="col-lg-6 col-md-6 text-light" >
+            <h1
+              class="head-text"
+              data-aos="fade-right"
+              data-aos-duration="2000"
+            >
+              Plan Every Event, With Ease & Elegance ✨
+            </h1>
+            <p class="head-para" data-aos="fade-right" data-aos-duration="2000">
+              From Weddings to Baby Showers, From Birthdays to Farewell
+              Ceremonies— All services in one place.
+            </p>
+            <div class="row">
+  <div class="col-lg-6">
+    <div class="d-flex align-items-center gap-3">
+      <button
+        type="button"
+        id="book-now"
+        class="btn btn-warning "
+      >
+        Book an Event
+      </button>
+
+      <a
+        class="btn btn-outline-light"
+        id="explore-service"
+        href="category.html"
+      >
+        Explore Services
+      </a>
+    </div>
+  </div>
+</div>
+
+          </div>
+
+          <div class="col-lg-6 col-md-6 mt-4">
+  <div class="image-collage">
+    <img src="images/white-gown-belly.jpg"i alt="img1" class="img1"  data-aos="zoom-in-up" data-aos-duration="2000" />
+    <img src="images/cake.jpg" alt="img2" class="img2" data-aos="zoom-in-right" data-aos-duration="2500" />
+    <img src="images/party.jpg" alt="img3" class="img3" data-aos="zoom-in-left" data-aos-duration="2000" />
+    <img src="images/carousel_1.jpg" alt="img4" class="img4" data-aos="zoom-in-down" data-aos-duration="2500"/>
+  </div>
+</div>
+
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Founder Section -->
+<section class="eventura-hero">
+  <div class="container">
+    <div class="hero-grid">
+      
+      <!-- LEFT CONTENT -->
+      <div class="hero-content" data-aos="fade-up" data-aos-duration="2000">
+        <div class="founder">
+          <img src="images/founder.jpg" alt="Founder" >
+          <span>
+            Hey, we’re <strong>Eventura</strong><br />
+            Your Event Planning Partner
+          </span>
+        </div>
+
+        <h1>
+          Crafting Moments,<br />
+          Creating Memories.
+        </h1>
+
+        <p class="hero-desc">
+          We design and deliver seamless events with creativity, precision,
+          and elegance — so you can enjoy every moment stress-free.
+        </p>
+
+        <a href="#" class="hero-btn">Plan Your Event</a>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="hero-image" data-aos="fade-left" data-aos-duration="2000">
+        <img src="images/couple-flower.jpg" alt="Event Setup">
+      </div>
+
+    </div>
+
+    <!-- STATS -->
+    <div class="hero-stats"  data-aos="zoom-out-down" data-aos-duration="1500" >
+      <div class="stat-card" >
+        <h3>8+</h3>
+        <p>Years Experience</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>1200+</h3>
+        <p>Events Managed</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>300+</h3>
+        <p>Trusted Vendors</p>
+      </div>
+
+      <div class="stat-card">
+        <h3>2500+</h3>
+        <p>Happy Clients</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+    
+
+    <!-- Service section -->
+
+    <section class="container" style="background-color: #062036">
+      <!-- style="background-color: #e0bc74 ;" -->
+      <h2
+        align="center"
+        style="color: white; text-transform: capitalize; margin-bottom: 45px; font-family: Cinzel; font-weight: 580;"
+      >
+        Our Events
+      </h2>
+      <div class="row g-4">
+        <!-- Birthday  -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card service-card">
+            <img
+              src="images/birthday.jpg"
+              alt="Birthday"
+              class="imag-card-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Birthday</h5>
+              <p class="card-text">
+                Make every birthday unforgettable with joyful themes and
+                surprises.
+              </p>
+              <a href="#" class="btn btn-outline btn-explore">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Wedding  -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card service-card">
+            <img
+              src="images/marriage.jpg"
+              alt="Marriage "
+              class="imag-card-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Wedding</h5>
+              <p class="card-text">
+                End-to-end wedding planning with elegance, care, and perfection.
+              </p>
+
+              <a href="wedding-explore.html" class="btn btn-explore">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Baby Shower -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card service-card">
+            <img
+              src="images/baby_Shower.jpg"
+              alt="Baby Shower"
+              class="imag-card-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Baby Shower</h5>
+              <p class="card-text">
+                Celebrate new beginnings with warm, beautiful, and thoughtful
+                setups.
+              </p>
+              <a href="#" class="btn btn-explore">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Engagement -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card service-card">
+            <img
+              src="images/engagement.jpg"
+              alt="Engagement"
+              class="imag-card-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Engagement</h5>
+              <p class="card-text">
+                Elegant celebrations to mark the start of a beautiful journey
+                together.
+              </p>
+              <a href="#" class="btn btn-explore">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Corporate Events -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card service-card">
+            <img
+              src="images/corporate.jpg"
+              alt="Corporate Events"
+              class="imag-card-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Corporate Events</h5>
+              <p class="card-text">
+                Professional event management tailored for impactful
+                moments.
+              </p>
+              <a href="#" class="btn btn-explore">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Funeral Services  -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card service-card">
+            <img
+              src="images/funeral-flower.jpg"
+              alt="Funeral Services "
+              class="imag-card-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Funeral Services</h5>
+              <p class="card-text">
+                Respectful, dignified arrangements handled with compassion and
+                care.
+              </p>
+
+              <a href="#" class="btn btn-explore">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anniversary -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card service-card">
+            <img
+              src="images/anniversary.jpg"
+              alt="Anniversary"
+              class="imag-card-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Anniversary</h5>
+              <p class="card-text">
+                Recreate memories and celebrate love with perfectly planned
+                moments.
+              </p>
+              <a href="#" class="btn btn-explore">Explore</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Housewarming -->
+        <div class="col-lg-3 col-md-6">
+          <div class="card service-card">
+            <img
+              src="images/housewarming.jpg"
+              alt="Housewarming"
+              class="imag-card-top"
+            />
+            <div class="card-body">
+              <h5 class="card-title">Housewarming</h5>
+              <p class="card-text">
+                Welcome new beginnings with tasteful and joyful housewarming
+                events.
+              </p>
+              <a href="#" class="btn btn-explore">Explore</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+
+    <!-- Client Testimonials Section -->
+
+    
+<!-- Client Testimonials -->
+<section class="client py-5">
+  <div class="container text-center">
+    <h2>what our clients say</h2>
+    <p style="color: white; margin-bottom: 40px;">
+      Real experiences from people who trusted Eventura for their special moments.
+    </p>
+
+    <div id="clientCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+
+      <!-- Indicators -->
+      <div class="carousel-indicators mb-0">
+        <button type="button" data-bs-target="#clientCarousel" data-bs-slide-to="0" class="active"></button>
+        <button type="button" data-bs-target="#clientCarousel" data-bs-slide-to="1"></button>
+        <button type="button" data-bs-target="#clientCarousel" data-bs-slide-to="2"></button>
+      </div>
+
+      <!-- Carousel Inner -->
+      <div class="carousel-inner">
+
+        <!-- Slide 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex justify-content-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="card text-center p-3 client-card pb-4">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+
+                <p class="card-para">
+                  <b>“</b>Eventura made our wedding planning completely stress-free. Every service was perfectly coordinated!<b>”</b>
+                </p>
+
+                <img src="images/profile2.jpg" class="profile-image" alt="profile">
+                <h4 class="card-title">Anjali & Rahul</h4>
+                <p class="card-text">Wedding Event</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 2 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="card text-center p-3 client-card  pb-4">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+
+                <p class="card-para">
+                  <b>“</b>From booking to execution, everything was smooth. Highly recommended for any celebration.<b>”</b>
+                </p>
+
+                <img src="images/profile3.jpg" class="profile-image" alt="profile">
+                <h4 class="card-title">Nithya Sumran</h4>
+                <p class="card-text">Birthday Party</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide 3 -->
+        <div class="carousel-item">
+          <div class="d-flex justify-content-center">
+            <div class="col-lg-4 col-md-6">
+              <div class="card text-center p-3 client-card  pb-4">
+                <div class="stars">
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                  <i class="bi bi-star-fill"></i>
+                </div>
+
+                <p class="card-para">
+                  <b>“</b>Professional vendors, easy booking, and great support. Eventura truly understands events.<b>”</b>
+                </p>
+
+                <img src="images/profile1.jpg" class="profile-image" alt="profile">
+                <h4 class="card-title">Thomas George</h4>
+                <p class="card-text">Corporate Event</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#clientCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+      </button>
+
+      <button class="carousel-control-next" type="button" data-bs-target="#clientCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+      </button>
+
+    </div>
+  </div>
+</section>
+
+<!-- Banner Section -->
+
+  <section class="banner">
+    <div class="container">
+    <div class="row align-items-center">
+
+      <!-- Left Content -->
+      <div class="col-lg-7  col-md-6 text-light" data-aos="fade-right"
+              data-aos-duration="2000">
+        <h2 class="banner-title">
+          Because Every <br>
+          Event Tells a Story
+        </h2>
+
+        <p class="banner-text">
+          Whether it's a joyful celebration or a meaningful farewell,
+          Eventura helps you plan events that reflect emotions, culture,
+          and care — without stress.
+        </p>
+
+        <p class="banner-highlight">
+          You celebrate. We manage the rest.
+        </p>
+       <div class="d-flex align-items-center gap-3 flex-nowrap">
+          <a href="#" class="btn btn-warn">Plan Your Event</a>
+          <a href="category.html" class="btn btn-outline-light">Explore Options</a>
+        </div>
+
+        
+      </div>
+
+      <!-- Right Image -->
+      <div class="col-lg-5 col-md-6 text-center mt-2 mt-lg-0 mt-md-5">
+        <img src="images/banner.png" alt="Event Banner" class="img-fluid banner-image" data-aos="flip-left"
+     data-aos-easing="ease-out-cubic"
+     data-aos-duration="2500">
+      </div>
+
+    </div>
+  </div>
+
+
+  </section>
+
+<!-- Footer Section -->
+
+    <footer class="eventura-footer">
+      <div class="container">
+        <img src="images/logo2.png" class="img-fluid-footer" />
+        <div class="row">
+          
+          <!-- Brand Info -->
+          <div class="col-lg-4 col-md-6">
+            
+            <h3 class="footer-logo">EVENTURA</h3>
+            <p class="footer-text">
+              Eventura makes event planning simple, reliable, and stress-free. From joyful celebrations to meaningful ceremonies, we bring all services together in one trusted platform. With verified vendors, transparent pricing, and seamless coordination, Eventura helps you plan every detail with confidence, turning your vision into a smooth, memorable experience.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="footer-title">Quick Links</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="home.html">Home</a>
+              </li>
+              <li>
+                <a href="event.html">Events</a>
+              </li>
+              <li>
+                <a href="category.html">Services</a>
+              </li>
+              <li>
+                <a href="about.html">Our Story</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="footer-title">Our Events</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="#">Wedding</a>
+              </li>
+              <li>
+                <a href="#">Birthday</a>
+              </li>
+              <li>
+                <a href="#">Baby Shower</a>
+              </li>
+              <li>
+                <a href="#">Corporate Events</a>
+              </li>
+              <li>
+                <a href="#">Anniversary</a>
+              </li>
+              <li>
+                <a href="#">Engagement</a>
+              </li>
+              <li>
+                <a href="#">House Warming</a>
+              </li>
+              <li>
+                <a href="#">Funeral Service</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="footer-title">Our Services</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="#">Catering</a>
+              </li>
+              
+              <li>
+                <a href="#">Makeup & Styling
+</a>
+              </li>
+              
+              <li>
+                <a href="#">Rental Outfits
+</a>
+              </li>
+              <li>
+                <a href="#">Event Decoration & Styling
+</a>
+              </li>
+              <li>
+                <a href="#">Photography & Videography
+</a>
+              </li>
+              <li>
+                <a href="#">Music & Entertainment
+</a>
+              </li>
+              <li>
+                <a href="#">Furniture & Equipment
+
+</a>
+              </li>
+              
+              <li>
+                <a href="#">More
+</a>
+              </li>
+              
+
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-2 col-md-6 mb-4 ">
+            <h5 class="footer-title">Contact Us</h5>
+            <p class="footer-text">
+              📍 Kerala, India<br />
+              📧 support@eventura.com<br />
+              📞 +91 98765 43210
+            </p>
+
+            <!-- Social Icons -->
+            <div class="footer-social">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+            
+          </div>
+          </div>
+          </div>
+
+          <!-- Bottom bar -->
+             <div class="footer-bottom text-center">
+                    <p>© 2025 Eventura. All Rights Reserved.</p>
+
+             </div>
+      
+    </footer>
+
+
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS Script -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+  </body>
+</html>

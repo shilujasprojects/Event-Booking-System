@@ -1,0 +1,940 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Category</title>
+    <link rel="shortcut icon" type="image/png" href="images/logo2.png" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+    />
+
+    <!-- AOS -->
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style type="text/css">
+      body {
+        background-color: #f1d49b;
+      }
+
+      .about-section {
+        display: flex;
+        position: relative;
+        width: 1521px;
+        height: 530px;
+        padding: 0 75px;
+        background:
+          linear-gradient(
+            to right,
+            rgba(245, 246, 247, 0.95) 10%,
+            rgba(245, 246, 247, 0.85) 20%,
+            rgba(245, 246, 247, 0.3) 70%,
+            transparent 100%
+          ),
+          url("images/banner-service.png") center / cover no-repeat;
+      }
+
+      .content-service {
+        position: absolute;
+        top: 57%;
+        left: 18%;
+        padding: 28%;
+        transform: translate(-50%, -50%);
+      }
+
+      .content-service h2 {
+        font-size: 40px;
+        font-family: cinzel;
+        font-weight: 700;
+      }
+
+      .content-service span {
+        font-style: italic;
+      }
+
+      .content-service a {
+        background-color: #d6aa5f;
+        color: #fff;
+      }
+
+      .content-service a:hover {
+        background-color: #d3b679;
+        color: #062036;
+      }
+
+      /* Tablet */
+      @media (max-width: 992px) {
+        .about-section {
+          margin-top: 40px;
+        }
+      }
+
+      /* Mobile */
+
+      @media (max-width: 576px) {
+        .content-service {
+          margin-left: 49px;
+        }
+      }
+
+      .service-image-card {
+        position: relative;
+        width: 100%;
+        height: 260px;
+        overflow: hidden;
+        border-radius: 14px;
+        cursor: pointer;
+      }
+
+      .service-image-card img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: transform 0.5s ease;
+      }
+
+      /* Overlay */
+      .service-overlay {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+
+        opacity: 0;
+        transition: opacity 0.4s ease;
+      }
+
+      .service-overlay h4 {
+        color: #fff;
+        font-family: Cinzel;
+        font-size: 22px;
+        text-align: center;
+        transform: translateY(20px);
+        transition: transform 0.4s ease;
+      }
+
+      /* Hover Effects */
+      .service-image-card:hover img {
+        transform: scale(1.1);
+      }
+
+      .service-image-card:hover .service-overlay {
+        opacity: 1;
+      }
+
+      .service-image-card:hover .service-overlay h4 {
+        transform: translateY(0);
+      }
+
+      /* How we works section */
+
+      /* Section background */
+      .how-it-works {
+        background: #f1d49b;
+        font-family: Cinzel;
+        color: #062036;
+        padding: 40px;
+        font-family: "Poppins", sans-serif;
+      }
+
+      /* Container */
+      .container {
+        max-width: 1200px;
+        margin: auto;
+      }
+
+      /* Title */
+      .section-title {
+        font-size: 60px;
+        font-weight: 600;
+        text-align: center;
+        font-family:
+          "Brush Script MT", "Brush Script Std", "Apple Chancery",
+          "Lucida Handwriting", "Snell Roundhand", cursive;
+        /* color: #1f2933; */
+        margin-bottom: 10px;
+      }
+
+      /* Subtitle */
+      .section-subtitle {
+        font-size: 16px;
+        /* color: #6b7280; */
+        text-align: center;
+        max-width: 600px;
+        margin: 0 auto 60px;
+      }
+
+      /* Responsive tweak */
+      @media (max-width: 576px) {
+        .section-title {
+          font-size: 37px;
+        }
+
+        .section-subtitle {
+          font-size: 14px;
+        }
+      }
+
+      /* Responsive tweak */
+      @media (max-width: 786px) {
+        .section-title {
+          font-size: 45px;
+        }
+      }
+
+      /* Grid */
+      .steps-grid {
+        display: grid;
+        text-align: center;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 30px;
+      }
+
+      /* Glass Card */
+      .glass-step {
+        background: rgba(255, 255, 255, 0.55);
+        backdrop-filter: blur(16px);
+        -webkit-backdrop-filter: blur(16px);
+        border-radius: 18px;
+        padding: 40px 30px;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+        transition:
+          transform 0.3s ease,
+          box-shadow 0.3s ease;
+      }
+
+      /* Hover effect */
+      .glass-step:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+      }
+
+      /* Step number */
+      .step-number {
+        display: inline-block;
+        font-size: 28px;
+        font-weight: 600;
+        color: #d6b36a; /* Eventura gold */
+        margin-bottom: 16px;
+      }
+
+      /* Card title */
+      .glass-step h4 {
+        font-size: 18px;
+        font-weight: 600;
+        /* color: #1f2933; */
+        margin-bottom: 12px;
+      }
+
+      /* Card text */
+      .glass-step p {
+        font-size: 14px;
+        /* color: #4b5563; */
+        line-height: 1.6;
+      }
+
+      /* Eventura service */
+
+      .why-eventura {
+        padding: 100px 0;
+        background: #f1d49b;
+      }
+
+      /* .container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+} */
+
+      .why-grid {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        gap: 70px;
+        align-items: center;
+      }
+
+      /* LEFT CONTENT */
+      .why-content {
+        text-align: left;
+      }
+
+      .section-tag {
+        font-size: 15px;
+        letter-spacing: 2px;
+        color: #a88a3d;
+        text-transform: uppercase;
+        font-family: Cinzel;
+        font-weight: 600;
+      }
+
+      .why-content h2 {
+        font-size: 42px;
+        font-family: Cinzel;
+        margin: 14px 0 18px;
+        line-height: 1.25;
+        color: #062036;
+        font-weight: 700;
+      }
+
+      @media (max-width: 567px) {
+        .why-content h2 {
+          font-size: 36px;
+        }
+      }
+
+      .why-desc {
+        font-size: 16px;
+        color: #555;
+        margin-bottom: 40px;
+        max-width: 520px;
+      }
+
+      /* FEATURES */
+      .why-features {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 28px;
+      }
+
+      .feature {
+        display: flex;
+        align-items: flex-start;
+        gap: 15px;
+      }
+
+      .feature .icon {
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: rgba(6, 32, 54, 0.12); /* derived from #062036 */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #062036;
+        font-size: 20px;
+        flex-shrink: 0;
+      }
+
+      .feature span {
+        font-size: 22px;
+        line-height: 1;
+      }
+
+      .feature h5 {
+        margin: 0;
+        font-family: Cinzel;
+        font-weight: 600;
+        font-size: 17px;
+        color: #062036;
+      }
+
+      .feature p {
+        margin-top: 6px;
+        font-size: 14px;
+        color: #666;
+      }
+
+      /* RIGHT IMAGE */
+      .why-image img {
+        width: 68%;
+        margin-left: 140px;
+        border-radius: 22px;
+        object-fit: cover;
+      }
+
+      @media (max-width: 900px) {
+        .why-grid {
+          grid-template-columns: 1fr;
+        }
+
+        /* .why-features {
+    grid-template-columns: 1fr;
+  } */
+      }
+
+      @media (max-width: 576px) {
+        .why-features {
+          grid-template-columns: 1fr;
+        }
+
+        .why-image img {
+          width: 30%;
+          height: 10%;
+          border-radius: 22px;
+          object-fit: cover;
+          margin-left: 0;
+        }
+
+        .why-image img {
+          width: 100%;
+          margin-left: 0;
+          border-radius: 22px;
+          object-fit: cover;
+        }
+      }
+
+      /* Text Banner  */
+
+      .text-banner {
+        font-family: Cinzel;
+        color: #fff7ee;
+      }
+
+      .text-banner p {
+        font-size: 20px;
+        margin-top: 10px;
+      }
+
+      .text-banner a {
+        background-color: #d6aa5f;
+        width: 15%;
+        margin-top: 10px;
+      }
+
+      .divider {
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .divider::before,
+      .divider::after {
+        flex: 2;
+      }
+
+      @media (max-width: 992px) {
+        .text-banner a {
+          margin-top: 15px;
+          width: 30%;
+        }
+      }
+
+      @media (max-width: 576px) {
+        .divider::before,
+        .divider::after {
+          flex: 0.5;
+          display: none;
+        }
+
+        .text-banner span {
+          font-size: 28px;
+        }
+
+        .text-banner p {
+          text-align: left;
+          margin-top: 10px;
+        }
+
+        .text-banner a {
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Navbar section -->
+
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top"
+      style="background-color: #062036"
+    >
+      <!-- rgb(13, 13, 58); -->
+
+      <!-- <img src="images/logo.png" style="width: 80px; height: 60px" alt="Logo" /> -->
+      <img
+        src="images/logo2.png"
+        style="width: 100px; height: 80px"
+        alt="Logo"
+      />
+      <h1
+        class="navbar-brand"
+        style="font-family: Cinzel; font-size: x-large; color: white"
+      >
+        EVENTURA
+      </h1>
+
+      <!-- mobile size (responsive hamburger icon invoking) -->
+
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarItems"
+        aria-controls="navbarItems"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarItems">
+        <ul class="navbar-nav hover-overlay ms-auto">
+          <li class="nav-item">
+            <a href="home.html" class="nav-link" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="event.html" class="nav-link">Events</a>
+          </li>
+          <li class="nav-item">
+            <a href="category.html" class="nav-link active">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">Our Story</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a href="book-now.html" class="btn btn-warning" id="book-now"
+              >Book Now</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Banner Section -->
+
+    <section class="about-section w-100">
+      <div class="content-service text-start">
+        <h2>Everything You Need <span>for a </span>Perfect Event</h2>
+        <p class="pt-3">
+          From Planning to exceution, Eventura brings together trusted services
+          to make every celebration seamless.
+        </p>
+        <a href="#" class="btn mt-3 mb-4">Explore Services</a>
+      </div>
+    </section>
+
+    <!-- Our Service section -->
+
+    <section class="container mt-5 service-card">
+      <div class="divider">
+        <span>Our Services</span>
+      </div>
+
+      <div class="row g-3 mt-3 mb-5">
+        <div class="col-lg-3 col-md-6">
+          <div class="service-image-card" data-aos="zoom-out" data-aos-duration="2000">
+            <img src="images/catering-service.jpg" alt="catering-service" />
+            <div class="service-overlay">
+              <h4>Catering Services</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-image-card" data-aos="zoom-out" data-aos-duration="2000">
+            <img src="images/decoration-service.jpg" alt="catering-service" />
+            <div class="service-overlay">
+              <h4>Event Decoration & Styling</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-image-card" data-aos="zoom-out" data-aos-duration="2000">
+            <img src="images/makeup-service.jpg" alt="makeup-service" />
+            <div class="service-overlay">
+              <h4>Makeup & Styling</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-image-card" data-aos="zoom-out" data-aos-duration="2000">
+            <img
+              src="images/photo-video-service.jpg"
+              alt="photo-video-service"
+            />
+            <div class="service-overlay">
+              <h4>Photography & Videography</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-image-card" data-aos="zoom-out" data-aos-duration="2000">
+            <img
+              src="images/rent-outfit-service.jpg"
+              alt="rent-outfit-service"
+            />
+            <div class="service-overlay">
+              <h4>Rental Outfits</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-image-card" data-aos="zoom-out" data-aos-duration="2000">
+            <img src="images/music-service.jpg" alt="music-service" />
+            <div class="service-overlay">
+              <h4>Music & Entertainment</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-image-card" data-aos="zoom-out" data-aos-duration="2000">
+            <img src="images/furniture-service.jpg" alt="furniture-service" />
+            <div class="service-overlay">
+              <h4>Furniture & Equipment</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-image-card" data-aos="zoom-out" data-aos-duration="2000">
+            <img src="images/travel-service.jpg" alt="travel-service" />
+            <div class="service-overlay">
+              <h4>Travel & Guest Management</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-image-card" data-aos="zoom-out" data-aos-duration="2000">
+            <img
+              src="images/accessories-service.jpg"
+              alt="accessories-service"
+            />
+            <div class="service-overlay">
+              <h4>Accessories & Event Props</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-image-card" data-aos="zoom-out" data-aos-duration="2000">
+            <img src="images/cake-service.jpg" alt="cake-service" />
+            <div class="service-overlay">
+              <h4>Custom Cakes & Bakery</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-image-card" data-aos="zoom-out" data-aos-duration="2000">
+            <img src="images/kids-service.jpg" alt="kids-service" />
+            <div class="service-overlay">
+              <h4>Kids Entertainment</h4>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+          <div class="service-image-card" data-aos="zoom-out" data-aos-duration="2000">
+            <img src="images/event-service.jpg" alt="event-service" />
+            <div class="service-overlay">
+              <h4>Event Planning & Coordination</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works section -->
+
+    <section class="how-it-works">
+      <div class="container p-0 p-md-4">
+        <h2 class="section-title">How We Work</h2>
+        <p class="section-subtitle">
+          From first idea to final applause, Eventura transforms your vision
+          into a beautifully curated event — effortless, elegant, and
+          unforgettable.
+        </p>
+
+        <div class="steps-grid">
+          <div class="glass-step" data-aos="zoom-in-up" data-aos-duration="1500">
+            <span class="step-number">01</span>
+            <h4>Discover Your Vision</h4>
+            <p>
+              We begin by understanding your story, style, and expectations to
+              shape an event that truly reflects you.
+            </p>
+          </div>
+
+          <div class="glass-step" data-aos="zoom-in-up" data-aos-duration="1500">
+            <span class="step-number">02</span>
+            <h4>Curate & Design</h4>
+            <p>
+              From themes and décor to vendors and timelines, every detail is
+              thoughtfully planned with elegance and precision.
+            </p>
+          </div>
+
+          <div class="glass-step" data-aos="zoom-in-up" data-aos-duration="1500">
+            <span class="step-number">03</span>
+            <h4>Seamless Execution</h4>
+            <p>
+              Our expert team manages everything behind the scenes, ensuring
+              your event unfolds flawlessly and stress-free.
+            </p>
+          </div>
+
+          <div class="glass-step" data-aos="zoom-in-up" data-aos-duration="1500">
+            <span class="step-number">04</span>
+            <h4>Celebrate the Moment</h4>
+            <p>
+              Relax, enjoy, and make memories while we deliver a perfectly
+              orchestrated experience from start to finish.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Eventura Services -->
+
+    <section class="why-eventura">
+      <div class="container">
+        <div class="why-grid">
+          <!-- LEFT CONTENT -->
+          <div class="why-content"  data-aos="fade-down-right" data-aos-duration="2000">
+            <span class="section-tag">Why Eventura Services</span>
+
+            <h2>
+              We Create Unforgettable<br />
+              Event Experiences
+            </h2>
+
+            <p class="why-desc">
+              At Eventura, we blend creativity, planning, and flawless execution
+              to deliver events that feel effortless, elegant, and memorable.
+            </p>
+
+            <div class="why-features">
+              <div class="feature">
+                <span class="icon">
+                  <i class="bi bi-bullseye"></i>
+                </span>
+                <div>
+                  <h5>Personalized Planning</h5>
+                  <p>Every detail is customized to match your vision.</p>
+                </div>
+              </div>
+
+              <div class="feature">
+                <span class="icon">
+                  <i class="bi bi-people"></i>
+                </span>
+                <div>
+                  <h5>Trusted Vendors</h5>
+                  <p>Reliable professionals curated for quality delivery.</p>
+                </div>
+              </div>
+
+              <div class="feature">
+                <span class="icon">
+                  <i class="bi bi-clock-history"></i>
+                </span>
+                <div>
+                  <h5>Timely Execution</h5>
+                  <p>Seamless coordination with zero last-minute stress.</p>
+                </div>
+              </div>
+
+              <div class="feature">
+                <span class="icon">
+                  <i class="bi bi-layers"></i>
+                </span>
+                <div>
+                  <h5>End-to-End Support</h5>
+                  <p>From concept to completion, we manage everything.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- RIGHT IMAGE -->
+          <div class="why-image">
+            <img
+              src="images/eventura-about.jpg"
+              alt="Eventura Event Setup"
+              data-aos="fade-up"
+     data-aos-duration="2000"
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!--  Text Banner -->
+
+    <section
+      class="container-fluid p-5 text-banner"
+      style="background-color: #062036; opacity: 0.85"
+    >
+      <div class="divider" style="color: #d6aa5f">
+        <span style="color: #fff7ee">Plan Your Event Effortlessly!</span>
+      </div>
+
+      <div class="text-center py-2">
+        <p>Book trusted services for your next celebration.</p>
+        <a href="#" class="btn">Get Started</a>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+
+    <footer class="eventura-footer">
+      <div class="container">
+        <img src="images/logo2.png" class="img-fluid-footer" />
+        <div class="row">
+          <!-- Brand Info -->
+          <div class="col-lg-4 col-md-6">
+            <h3 class="footer-logo">EVENTURA</h3>
+            <p class="footer-text">
+              Eventura makes event planning simple, reliable, and stress-free.
+              From joyful celebrations to meaningful ceremonies, we bring all
+              services together in one trusted platform. With verified vendors,
+              transparent pricing, and seamless coordination, Eventura helps you
+              plan every detail with confidence, turning your vision into a
+              smooth, memorable experience.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="footer-title">Quick Links</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="home.html">Home</a>
+              </li>
+              <li>
+                <a href="event.html">Events</a>
+              </li>
+              <li>
+                <a href="category.html">Services</a>
+              </li>
+              <li>
+                <a href="about.html">Our Story</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="footer-title">Our Events</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="#">Wedding</a>
+              </li>
+              <li>
+                <a href="#">Birthday</a>
+              </li>
+              <li>
+                <a href="#">Baby Shower</a>
+              </li>
+              <li>
+                <a href="#">Corporate Events</a>
+              </li>
+              <li>
+                <a href="#">Anniversary</a>
+              </li>
+              <li>
+                <a href="#">Engagement</a>
+              </li>
+              <li>
+                <a href="#">House Warming</a>
+              </li>
+              <li>
+                <a href="#">Funeral Service</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="footer-title">Our Services</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="#">Catering</a>
+              </li>
+
+              <li>
+                <a href="#">Makeup & Styling </a>
+              </li>
+
+              <li>
+                <a href="#">Rental Outfits </a>
+              </li>
+              <li>
+                <a href="#">Event Decoration & Styling </a>
+              </li>
+              <li>
+                <a href="#">Photography & Videography </a>
+              </li>
+              <li>
+                <a href="#">Music & Entertainment </a>
+              </li>
+              <li>
+                <a href="#">Furniture & Equipment </a>
+              </li>
+
+              <li>
+                <a href="#">More </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="footer-title">Contact Us</h5>
+            <p class="footer-text">
+              📍 Kerala, India<br />
+              📧 support@eventura.com<br />
+              📞 +91 98765 43210
+            </p>
+
+            <!-- Social Icons -->
+            <div class="footer-social">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Bottom bar -->
+      <div class="footer-bottom text-center">
+        <p>© 2025 Eventura. All Rights Reserved.</p>
+      </div>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS Script -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

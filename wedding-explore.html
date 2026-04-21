@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Event Booking - Wedding Experience</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Courgette&display=swap" rel="stylesheet">
+<style>
+  *{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+font-family:'Poppins',sans-serif;
+background:#f1d49b;
+color:#062036;
+}
+
+/* HERO */
+
+.hero{
+height:90vh;
+background:url("https://images.unsplash.com/photo-1519741497674-611481863552") center/cover no-repeat;
+display:flex;
+align-items:center;
+justify-content:center;
+text-align:center;
+}
+
+.hero-content{
+background:rgba(6,32,54,0.75);
+padding:60px;
+border-radius:10px;
+
+color:white;
+}
+
+.hero h1{
+font-family:'Cinzel',serif;
+font-size:55px;
+margin-bottom:20px;
+text-shadow: 2px 2px 2px #fff7ee;
+/* color:#fff7ee; */
+color: #f1d49b;
+}
+
+.hero p{
+max-width:600px;
+margin:auto;
+font-size: 30px;
+font-family: 'Great Vibes',cursive;
+/* font-family: 'Courgette',cursive; */
+line-height:1.6;
+}
+
+.hero button{
+margin-top:25px;
+padding:12px 30px;
+border:none;
+background:#f1d49b;
+color:#062036;
+font-size:16px;
+cursor:pointer;
+border-radius:5px;
+font-weight:500;
+font-family: 'Courgette',cursive;
+}
+
+/* STORY */
+
+.story{
+padding:120px 20px;
+text-align:center;
+max-width:800px;
+
+margin:auto;
+}
+
+.story h2{
+font-size:42px;
+margin-bottom:20px;
+font-family:'Cinzel',serif;
+color:#062036;
+}
+
+.story p{
+line-height:1.8;
+}
+
+/* GALLERY */
+
+.gallery{
+padding:40px 40px 80px 40px;
+/* background:#f1d49b; */
+}
+
+.gallery h2{
+margin-bottom:40px;
+font-size:36px;
+font-family: 'Courgette',cursive;
+color:#062036;
+}
+
+
+/* --- */
+
+
+
+.gallery-wrapper{
+position:relative;
+display:flex;
+align-items:center;
+}
+
+.gallery-row{
+display:flex;
+gap:20px;
+overflow:hidden;
+scroll-behavior:smooth;
+}
+
+/* .gallery-row img{
+height:260px;
+border-radius:10px;
+cursor:pointer;
+transition:0.4s;
+} */
+
+/* Cinematic gallery hover */
+
+.gallery-row img{
+height:260px;
+border-radius:10px;
+cursor:pointer;
+transition:0.4s;
+/* box-shadow:0 10px 30px rgba(0,0,0,0.25); */
+}
+
+.gallery-row img:hover{
+transform:scale(1.08);
+}
+
+
+
+
+/* SCROLL BUTTONS */
+
+.scroll-btn{
+position:absolute;
+top:50%;
+transform:translateY(-50%);
+background:#062036;
+color:#fff7ee;
+border:none;
+font-size:28px;
+width:45px;
+height:45px;
+border-radius:50%;
+cursor:pointer;
+z-index:2;
+}
+
+.scroll-btn.left{
+left:-20px;
+}
+
+.scroll-btn.right{
+right:-20px;
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:1000;
+}
+
+.lightbox img{
+max-width:90%;
+max-height:85%;
+border-radius:10px;
+}
+
+.close{
+position:absolute;
+top:30px;
+right:40px;
+font-size:40px;
+color:white;
+cursor:pointer;
+}
+
+
+/* VLOGS */
+
+.vlogs{
+padding:80px 40px;
+background:#062036;
+color:white;
+}
+
+.vlogs h2{
+margin-bottom:40px;
+text-align: center;
+font-family: 'Courgette',cursive;
+font-size:36px;
+color:#fff7ee;
+}
+
+.video-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(350px,1fr));
+gap:30px;
+}
+
+iframe{
+width:100%;
+height:220px;
+border:none;
+border-radius:10px;
+}
+
+/* PACKAGES */
+
+.packages{
+padding:100px 20px;
+text-align:center;
+background:#f1d49b;
+}
+
+.packages h2{
+font-size:60px;
+margin-bottom:50px;
+color:#062036;
+font-family: 'Great Vibes',cursive;
+}
+
+.package-container{
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+}
+
+.card{
+background: rgba(255, 247, 238, 0.5);
+padding:35px;
+width:260px;
+border-radius:10px;
+box-shadow:0 10px 25px rgba(0,0,0,0.08);
+/* transition:0.3s; */
+}
+
+.card:hover{
+transform:translateY(-10px);
+transition: 0.5s ease-in-out;
+border:2px solid #062036;
+
+}
+
+.card h3{
+font-size:28px;
+margin-bottom:20px;
+font-family: 'Courgette',cursive;
+color:#062036;
+}
+
+.card ul{
+list-style:none;
+line-height:2;
+margin-bottom:20px;
+}
+
+.card button{
+padding:10px 20px;
+border:none;
+background:#062036;
+color:#fff7ee;
+cursor:pointer;
+border-radius:5px;
+}
+
+
+
+/* CTA */
+
+.cta{
+padding:120px 20px;
+text-align:center;
+background:#062036;
+color:white;
+}
+
+.cta h2{
+font-size:42px;
+margin-bottom:30px;
+font-family: 'Courgette',cursive;
+color:#fff7ee;
+}
+
+.cta button{
+padding:14px 32px;
+font-size:18px;
+border:none;
+background:#f1d49b;
+font-family: cursive;
+color:#062036;
+cursor:pointer;
+border-radius:6px;
+}
+
+/* =========================
+TABLET (1024px)
+========================= */
+
+@media (max-width:1024px){
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+font-size:24px;
+}
+
+.gallery-row img{
+height:220px;
+}
+
+.video-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.package-container{
+gap:20px;
+}
+
+.card{
+width:220px;
+}
+
+}
+
+
+/* =========================
+TABLET SMALL (768px)
+========================= */
+
+@media (max-width:768px){
+
+.hero{
+height:70vh;
+padding:20px;
+}
+
+.hero-content{
+padding:35px;
+}
+
+.hero h1{
+font-size:34px;
+}
+
+.hero p{
+font-size:22px;
+}
+
+.story{
+padding:80px 20px;
+}
+
+.story h2{
+font-size:34px;
+}
+
+.story p{
+  padding: 15px;
+}
+
+.gallery{
+padding:30px 20px 60px 20px;
+}
+
+.gallery h2{
+font-size:30px;
+}
+
+.gallery-row img{
+height:200px;
+}
+
+.scroll-btn{
+width:38px;
+height:38px;
+font-size:22px;
+}
+
+.video-grid{
+/* grid-template-columns:1fr; */
+}
+
+.packages h2{
+font-size:48px;
+}
+
+.package-container{
+/* flex-direction:column; */
+align-items:center;
+}
+
+.card{
+width:90%;
+max-width:350px;
+}
+
+.cta h2{
+font-size:34px;
+}
+
+}
+
+
+/* =========================
+MOBILE (480px)
+========================= */
+
+@media (max-width:480px){
+
+.hero{
+height:60vh;
+}
+
+.hero-content{
+padding:25px;
+}
+
+.hero h1{
+font-size:28px;
+}
+
+.hero p{
+font-size:20px;
+}
+
+.hero button{
+padding:10px 22px;
+font-size:14px;
+}
+
+.story{
+padding:60px 15px;
+}
+
+.story h2{
+/* font-size:28px; */
+max-width: 100%;
+}
+
+.gallery h2{
+font-size:26px;
+}
+
+.gallery-row{
+gap:12px;
+}
+
+.gallery-row img{
+height:170px;
+}
+
+.scroll-btn{
+display:none;
+}
+
+.vlogs h2{
+  font-size: 25px;
+}
+
+.video-grid{
+grid-template-columns:1fr;
+}
+
+
+.video-grid iframe{
+height:190px;
+}
+
+.packages h2{
+font-size:40px;
+}
+
+.card{
+padding:25px;
+}
+
+.cta{
+padding:80px 20px;
+}
+
+.cta h2{
+font-size:26px;
+}
+
+.cta button{
+padding:12px 24px;
+font-size:16px;
+}
+
+}
+
+
+/* =========================
+LIGHTBOX RESPONSIVE
+========================= */
+
+@media (max-width:768px){
+
+.lightbox img{
+max-width:95%;
+max-height:70%;
+}
+
+.close{
+font-size:30px;
+top:20px;
+right:25px;
+}
+
+}
+</style>
+</head>
+
+<body>
+
+  
+
+<!-- HERO SECTION -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+<h1>Luxury Wedding Experience</h1>
+
+<p>
+Create unforgettable wedding memories with premium decoration,
+photography, catering and entertainment.
+</p>
+
+<button>Book Your Wedding</button>
+
+</div>
+
+</section>
+
+
+<!-- APPLE STYLE STORY SECTION -->
+
+<section class="story">
+
+<h2>Crafting Beautiful Memories</h2>
+
+<p>
+We design premium experiences for weddings, engagements, birthdays,
+corporate events and celebrations. Our team creates elegant decoration,
+luxury catering and unforgettable event moments.
+</p>
+
+</section>
+
+
+<!-- NETFLIX STYLE GALLERY -->
+
+<section class="gallery">
+
+<h2>Wedding Moments</h2>
+
+<div class="gallery-wrapper">
+
+<button class="scroll-btn left" onclick="scrollGallery(-300)">❮</button>
+
+<div class="gallery-row" id="gallery">
+
+<img src="https://images.unsplash.com/photo-1520854221256-17451cc331bf">
+<img src="https://images.unsplash.com/photo-1529636798458-92182e662485">
+<img src="https://images.unsplash.com/photo-1537633552985-df8429e8048b">
+<img src="https://images.unsplash.com/photo-1507504031003-b417219a0fde">
+<img src="https://images.unsplash.com/photo-1519741497674-611481863552">
+<img src="https://images.unsplash.com/photo-1522673607200-164d1b6ce486">
+
+</div>
+
+<button class="scroll-btn right" onclick="scrollGallery(300)">❯</button>
+
+</div>
+
+</section>
+
+
+<!-- LIGHTBOX POPUP -->
+
+<div class="lightbox" id="lightbox">
+<span class="close">&times;</span>
+<img class="lightbox-img" id="lightbox-img">
+</div>
+
+
+<!-- VIDEO VLOG SECTION -->
+
+<section class="vlogs">
+
+<h2>Wedding Event Vlogs</h2>
+
+<div class="video-grid">
+
+<iframe src="https://www.youtube.com/embed/2Vv-BfVoq4g" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/kXYiU_JCYtU" allowfullscreen></iframe>
+
+<iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" allowfullscreen></iframe>
+
+</div>
+
+</section>
+
+
+<!-- EVENT PACKAGES -->
+
+<section class="packages">
+
+<h2>Wedding Packages</h2>
+
+<div class="package-container">
+
+
+<div class="card popular">
+
+<h3>Silver</h3>
+
+<ul>
+<li>Venue Decoration</li>
+<li>Catering Service</li>
+<li>Photography</li>
+<li>Basic Lighting</li>
+</ul>
+
+<button>Select Plan</button>
+
+</div>
+
+
+<div class="card popular">
+
+<h3>Gold</h3>
+
+<ul>
+<li>Premium Decoration</li>
+<li>Catering Service</li>
+<li>Photography & Videography</li>
+<li>DJ & Lighting</li>
+</ul>
+
+<button>Select Plan</button>
+
+</div>
+
+
+<div class="card popular">
+
+<h3>Platinum</h3>
+
+<ul>
+<li>Luxury Decoration</li>
+<li>5 Star Catering</li>
+<li>Photography + Cinematic Video</li>
+<li>Live Music Band</li>
+</ul>
+
+<button>Select Plan</button>
+
+</div>
+
+
+<div class="card popular">
+
+<h3>Custom</h3>
+
+<ul>
+<li>Luxury Decoration</li>
+<li>5 Star Catering</li>
+<li>Photography + Cinematic Video</li>
+<li>Live Music Band</li>
+</ul>
+
+<button>Select Plan</button>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- CALL TO ACTION -->
+
+<section class="cta">
+
+<h2>Let’s Make Your Dream Wedding Come True</h2>
+
+<button>Start Planning</button>
+
+</section>
+
+<script>
+
+// Scroll buttons
+
+const gallery = document.getElementById("gallery");
+
+function scrollGallery(value){
+gallery.scrollLeft += value;
+}
+
+
+// AUTO SLIDE
+
+let autoSlide = setInterval(slideGallery,4000);
+
+function slideGallery(){
+
+gallery.scrollLeft += 300;
+
+if(gallery.scrollLeft + gallery.clientWidth >= gallery.scrollWidth){
+gallery.scrollLeft = 0;
+}
+
+}
+
+
+// PAUSE WHEN HOVER
+
+gallery.addEventListener("mouseenter",()=>{
+
+clearInterval(autoSlide);
+
+});
+
+
+// RESUME WHEN LEAVE
+
+gallery.addEventListener("mouseleave",()=>{
+
+autoSlide = setInterval(slideGallery,2000);
+
+});
+
+
+
+// LIGHTBOX
+
+const images = document.querySelectorAll(".gallery-row img");
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const closeBtn = document.querySelector(".close");
+
+images.forEach(img => {
+
+img.addEventListener("click", ()=>{
+
+lightbox.style.display="flex";
+lightboxImg.src = img.src;
+
+});
+
+});
+
+
+closeBtn.onclick = ()=>{
+lightbox.style.display="none";
+}
+
+lightbox.onclick = ()=>{
+lightbox.style.display="none";
+}
+
+</script>
+
+
+</body>
+</html>

@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="shortcut icon" type="image/png" href="images/logo2.png" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"
+/>
+
+    <!-- AOS  -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="style.css">
+    
+    <style type="text/css">
+
+  /* MAIN WRAPPER */
+.contact-wrapper {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  font-family: Cinzel;
+}
+
+/* LEFT CONTENT */
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* HERO SECTION (FULL BLUE) */
+.hero {
+  background: linear-gradient(135deg, #041826, #062036);
+  color: #ffffff;
+  padding: 80px 80px;
+}
+
+.hero h1 {
+  font-size: 72px;
+  margin-bottom: 15px;
+  color: #f1d49b;
+}
+
+.hero p {
+  font-size: 20px;
+  color: #fff7ee;
+  max-width: 700px;
+  font-family: Cursive;
+}
+
+/* CONTACT INFO (FULL WHITE) */
+.contact-info {
+  background: #fff7ee;
+  padding: 60px 80px;
+}
+
+.contact-info h2 {
+  font-size: 26px;
+  margin-bottom: 15px;
+  color: #062036;
+}
+
+.contact-info p {
+  font-size: 14px;
+  color: #666;
+  max-width: 800px;
+}
+
+/* INFO BOXES */
+.info-boxes {
+  display: flex;
+  gap: 100px;
+  margin-top: 40px;
+}
+
+.info-box {
+  text-align: center;
+  max-width: 200px;
+}
+
+.info-box i {
+  font-size: 28px;
+  color: #062036;
+  background: #f1d49b;
+  padding: 18px;
+  border-radius: 50%;
+  transition: 0.3s ease;
+}
+
+.info-box:hover i {
+  background: #062036;
+  color: #f1d49b;
+  transform: translateY(-5px);
+}
+
+.info-box h4 {
+  font-size: 15px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+  color: #062036;
+}
+
+.info-box span {
+  font-size: 13px;
+  color: #777;
+}
+
+/* RIGHT IMAGE SECTION */
+/* IMAGE SECTION */
+.image-section {
+  position: absolute;
+  right: 150px;
+  top: 60px;
+  width: 380px;
+}
+
+/* WRAPPER FOR BORDER EFFECT */
+.image-wrapper {
+  position: relative;
+}
+
+/* IMAGE */
+.image-wrapper img {
+  width: 100%;
+  height: 600px;
+  object-fit: cover;
+  border-radius: 250px 250px 0 0;
+  display: block;
+  position: relative;
+  z-index: 2;
+}
+
+/* OUTLINE BORDER */
+.image-wrapper::before {
+  content: "";
+  /* margin-top: 5px; */
+  position: absolute;
+  top: -12px;         /* gap control */
+  left: -12px;
+  right: -15px;
+  bottom: 0;
+  border-radius: 270px 270px 0 0;
+  border: 3px solid #fff7ee; /* subtle white outline */
+  z-index: 1;
+}
+
+/* ============================= */
+/* RESPONSIVE STYLES */
+/* ============================= */
+
+
+
+@media (max-width: 768px) {
+  .hero p{
+    max-width: 50%;
+    font-size: 15px;
+  }
+  
+   .hero h1{
+    font-size: 42px;
+  }
+
+  .contact-info p{
+    max-width:  50%;
+  }
+
+  .info-boxes{
+    gap: 80px;
+  }
+  .image-section {
+    right: 20px;
+    width: 320px;
+    top: 170px;
+  }
+
+  .image-wrapper img {
+    height: 350px;
+    width: 100%;
+  }
+  /* OUTLINE BORDER */
+.image-wrapper::before {
+  
+  top: -15px;         /* gap control */
+  left: -15px;
+  right: -15px;
+  
+}
+}
+
+
+
+@media (max-width: 576px) {
+
+  .hero,
+  .contact-info {
+    padding: 60px 30px;
+  }
+
+ 
+
+  /* Hide image fully */
+  .image-section {
+    display: none;
+  }
+
+  /* Stack all info boxes */
+  .info-boxes {
+    flex: 0 0 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+ 
+
+  .hero p,
+  .contact-info p {
+    max-width: 100%;
+  }
+
+}
+      /* --------------- Form Section ---------------- */
+
+    
+
+.contact-section {
+    padding: 80px 60px;
+    background: linear-gradient(135deg,#edcb96, #ffe5bb);
+    color: #062036;
+      /* background: linear-gradient(135deg, #f1d49b, #c89d72); */
+
+}
+
+.contact-container {
+    display: flex;
+    gap: 60px;
+    align-items: flex-start;
+}
+
+.contact-container h2{
+    font-family: "Lucida Handwriting", cursive;
+
+}
+
+/* LEFT */
+.form-side {
+    flex: 1;
+}
+
+.form-container {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    margin-top: 20px;
+}
+
+.form-row {
+    display: flex;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+
+.form-row .form-floating,
+.form-row .form-select {
+    flex: 1;
+}
+
+textarea {
+    width: 100%;
+    height: 240px;
+    margin-bottom: 20px;
+    padding: 14px;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+    
+}
+
+input, select {
+    padding: 14px;
+    border: 1px solid #e3e3e3;
+    border-radius: 8px;
+}
+
+.form-control:focus,
+.form-select:focus {
+  
+  border-color: #c89d72 !important;
+  box-shadow: none !important;
+  outline: none !important;
+
+}
+
+.submit-btn {
+    background: #c89d72;
+    color: #fff;
+    border: none;
+    padding: 14px 40px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+/* RIGHT  ------Map Section */
+.map-side {
+    flex: 1;
+}
+.map-para{
+    max-width: 100%;
+    margin-bottom: 0;
+    
+}
+
+.map-side h2{
+    font-family: cinzel;
+}
+
+.map-side iframe {
+    width: 100%;
+    height: 320px;
+    border: 0;
+    border-radius: 12px;
+    margin-top: 20px;
+}
+
+.map-side h4{
+    font-family: Cinzel;
+    margin-top: 6px;
+}
+
+/* Social Media Section  */
+
+.social{
+    display:flex;
+    gap:15px;
+}
+
+.social div{
+    width:25px;
+    height:25px;
+    background:#062036;
+    color:#f1d49b;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    border-radius:6px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.social div:hover{
+    background:#f1d49b;
+    color:#062036;
+}
+
+
+/* RESPONSIVE */
+@media (max-width: 992px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+
+
+@media (max-width: 576px){
+    .contact-section{
+        padding: 30px 20px;
+    }
+
+     .form-row{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .form-container{
+        padding: 25px;
+    }
+
+    .submit-btn{
+        width: 100%;
+    }
+  }
+
+
+/* ------- News letter Section -------- */
+
+
+.lux-newsletter {
+  position: relative;
+  padding: 70px 20px;   /* was 120px */
+  background: linear-gradient(135deg, #031421, #062036);
+  overflow: hidden;
+  text-align: center;
+  color: #fff;
+}
+
+/* Floating background glow */
+.lux-newsletter::before,
+.lux-newsletter::after {
+  content: "";
+  position: absolute;
+  width: 250px;   /* was 400px */
+  height: 250px;
+
+  background: radial-gradient(circle, rgba(241,212,155,0.15), transparent 70%);
+  border-radius: 50%;
+  animation: floatGlow 8s ease-in-out infinite alternate;
+}
+
+.lux-newsletter::before {
+  top: -100px;
+  left: -100px;
+}
+
+.lux-newsletter::after {
+  bottom: -120px;
+  right: -120px;
+  animation-delay: 3s;
+}
+
+/* Floating Animation */
+@keyframes floatGlow {
+  from {
+    transform: translateY(0px) scale(1);
+  }
+  to {
+    transform: translateY(-30px) scale(1.1);
+  }
+}
+
+.lux-container {
+  position: relative;
+  max-width: 350px;
+  margin: auto;
+  max-width: 70%;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px 35px;   /* was 60px 50px */
+  border-radius: 25px;
+  border: 1px solid rgba(241,212,155,0.2);
+  box-shadow: 0 0 40px rgba(241,212,155,0.08);
+}
+
+/* Heading */
+.lux-container h2 {
+  font-family: Cinzel;
+    font-size: 28px;   /* was 36px */
+  margin-bottom: 12px;
+
+  color: #f1d49b;
+  letter-spacing: 1px;
+}
+
+/* Paragraph */
+.lux-container p {
+  margin-bottom: 20px;   /* was 35px */
+  font-size: 14px;
+
+  color: #ddd;
+ 
+  line-height: 1.6;
+}
+
+/* Form */
+.lux-form {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.lux-form input {
+  padding: 16px 25px;
+  width: 60%;
+  min-width: 260px;
+  border-radius: 40px;
+  border: 1px solid rgba(241,212,155,0.3);
+  background: rgba(255,255,255,0.07);
+  color: #fff;
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.lux-form input::placeholder {
+  color: #ccc;
+}
+
+.lux-form input:focus {
+  border-color: #f1d49b;
+  box-shadow: 0 0 12px rgba(241,212,155,0.4);
+}
+
+/* Button */
+.lux-form button {
+  padding: 16px 35px;
+  border-radius: 40px;
+  border: none;
+  background: linear-gradient(135deg, #f1d49b, #c89d72);
+  color: #062036;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+
+.lux-form button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(241,212,155,0.4);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .lux-container {
+    padding: 40px 25px;
+  }
+
+  .lux-form input {
+    width: 65%;
+  }
+}
+
+@media (max-width: 576px){
+
+  .lux-newsletter{
+    padding: 40px 15px;
+  }
+
+  .lux-container{
+    max-width: 100%;
+    padding: 35px 20px;
+  }
+
+  .lux-container h2{
+    font-size: 24px;
+  }
+
+  .lux-container p{
+    font-size: 13px;
+  }
+
+  
+
+  .lux-form input{
+    width: 100%;
+    min-width: unset;
+    padding: 14px 20px;
+  }
+
+  .lux-form button{
+    width: 100%;
+    padding: 14px;
+  }
+
+}
+
+    </style>
+  </head>
+  <body>
+   <!-- Navbar section -->
+
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top"
+      style="background-color: #062036"
+    >
+      <!-- rgb(13, 13, 58); -->
+
+      <!-- <img src="images/logo.png" style="width: 80px; height: 60px" alt="Logo" /> -->
+       <img src="images/logo2.png" style="width: 100px; height: 80px" alt="Logo" />
+      <h1
+        class="navbar-brand"
+        style="font-family: Cinzel; font-size: x-large; color: white"
+      >
+        EVENTURA
+      </h1>
+
+      <!-- mobile size (responsive hamburger icon invoking) -->
+
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarItems"
+        aria-controls="navbarItems"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarItems">
+        <ul class="navbar-nav hover-overlay ms-auto">
+          <li class="nav-item">
+            <a href="home.html" class="nav-link" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="event.html" class="nav-link ">Events</a>
+          </li>
+          <li class="nav-item">
+            <a href="category.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link">Our Story</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link active">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="book-now.html"
+              class="btn btn-warning"
+              id="book-now"
+              >Book Now</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- <br /> -->
+
+  <section class="contact-wrapper mt-5">
+
+
+
+  <!-- LEFT CONTENT -->
+  <div class="content">
+
+    <!-- HERO -->
+    <div class="hero" >
+      <h1 data-aos="fade-down-right" data-aos-duration="2000">Contact Us</h1>
+      <p data-aos="fade-down-right" data-aos-duration="2000">
+        We'd love to hear from you! Whether you have a question about our services,
+        need help with booking an event, or just want to get in touch,
+        we're here to assist you.
+      </p>
+    </div>
+
+    <!-- CONTACT INFO -->
+    <div class="contact-info" data-aos="fade-left" data-aos-duration="2500">
+      <h2>Contact Information</h2>
+      <p>
+        Eventura is dedicated to turning your special moments into unforgettable
+        experiences — reach out to us for seamless event planning and expert coordination.
+      </p>
+
+      <div class="info-boxes">
+        <div class="info-box">
+          <i class="bi bi-telephone"></i>
+          <h4>(+91) 984 739 7414</h4>
+          <span>Quick Support</span>
+        </div>
+
+        <div class="info-box">
+          <i class="bi bi-envelope"></i>
+          <h4>support@eventura.com</h4>
+          <span>Email Assistance</span>
+        </div>
+
+        <div class="info-box">
+          <i class="bi bi-geo-alt"></i>
+          <h4>123 Main Street, Kozhikode</h4>
+          <span>Office Location</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+    <!-- RIGHT SIDE IMAGE -->
+     <div class="image-section">
+    <div class="image-wrapper " data-aos="fade-up"
+     data-aos-easing="linear"
+     data-aos-duration="1500">
+      <img src="images/anniversary-couple.jpg" alt=""/>
+    </div>
+  </div>
+  
+</section>
+
+ 
+    
+
+  
+
+    
+  <!-- Question and Map Section -->
+
+  <section class="contact-section">
+
+    <div class="contact-container">
+
+        <!-- LEFT SIDE - FORM -->
+        <div class="form-side">
+            <h2>Have Any Question?</h2>
+            <p>
+                We’d love to hear from you. Fill out the form and our team will get back to you shortly.
+            </p>
+
+            <div class="form-container">
+                <form>
+
+                    <div class="form-row">
+                        <!-- <input type="text" placeholder="Your Name" class="form-control" required> -->
+                         <div class="form-floating">
+                            <input
+                                type="text"
+                                class="form-control"
+                                id="name"
+                                placeholder="Your Name"
+                                required
+                            />
+                            <label for="name">Name</label>
+            
+                        </div>
+                       <div class="form-floating">
+                         <input type="email" placeholder="Your Email address" class="form-control"  required>
+                         <label for="email"> Email Address</label>
+                       </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="form-floating">
+                            <input type="text" placeholder="Your Phone" class="form-control"  required>
+                            <label for="phone">Phone</label>
+
+                        </div>
+                        <div class="form-floating">
+                            <select class="form-select" required>
+                            <option value="">Select Event</option>
+                            <option>Wedding</option>
+                            <option>Birthday</option>
+                            <option>Anniversary</option>
+                            <option>Baby Shower</option>
+                            <option>Funeral Services</option>
+                            <option>House Warming</option>
+                            <option>Corporate Events</option>
+                            <option>Engagement</option>
+                        </select>
+                        </div>
+                    </div>
+
+                    <!-- <div class="form-floating">
+                        <textarea placeholder="Message" class="form-control"  required></textarea>
+                        <label for="msg">Message</label>
+                    </div> -->
+
+                     <div class="form-floating mb-3">
+              <textarea
+                class="form-control"
+                id="message"
+                placeholder="Message"
+                style="height: 120px"
+                required
+              ></textarea>
+              <label for="message">Message</label>
+            </div>
+
+                    <button type="submit" class="submit-btn">SUBMIT NOW</button>
+
+                </form>
+            </div>
+        </div>
+
+        <!-- RIGHT SIDE - MAP -->
+        <div class="map-side">
+            <h2>Our Location</h2>
+            <p class="map-para">
+                Visit Eventura at our Kozhikode office to discuss your dream event in person and let us help you plan every detail with care and excitement.
+            </p>
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d119022.83749813585!2d75.72841332197618!3d11.255555506749628!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65938563d4747%3A0x32150641ca32ecab!2sKozhikode%2C%20Kerala!5e1!3m2!1sen!2sin!4v1762326144592!5m2!1sen!2sin" width="100%" height="400px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+
+
+        <h4>Social Media</h4>
+        <div class="social mt-2">
+            <div><i class="bi bi-facebook"></i></div>
+            <div><i class="bi bi-twitter"></i></div>
+            <div><i class="bi bi-youtube"></i></div>
+            <div><i class="bi bi-instagram"></i></div>
+        </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- News letter section -->
+
+<section class="lux-newsletter">
+  <div class="lux-overlay"></div>
+
+  <div class="lux-container">
+    <h2>Join The Eventura Circle</h2>
+    <p>
+      Receive curated event inspirations, exclusive previews, and private offers crafted for unforgettable celebrations.
+    </p>
+
+    <form class="lux-form">
+      <input type="email" placeholder="Enter your email address" required>
+      <button type="submit">Subscribe</button>
+    </form>
+  </div>
+</section>
+
+
+    
+
+<!-- Footer Section -->
+
+    <footer class="eventura-footer">
+      <div class="container ">
+        <img src="images/logo2.png" class="img-fluid-footer" />
+        <div class="row">
+          
+          <!-- Brand Info -->
+          <div class="col-lg-4 col-md-6">
+            
+            <h3 class="footer-logo">EVENTURA</h3>
+            <p class="footer-text">
+              Eventura makes event planning simple, reliable, and stress-free. From joyful celebrations to meaningful ceremonies, we bring all services together in one trusted platform. With verified vendors, transparent pricing, and seamless coordination, Eventura helps you plan every detail with confidence, turning your vision into a smooth, memorable experience.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="footer-title">Quick Links</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="home.html">Home</a>
+              </li>
+              <li>
+                <a href="event.html">Events</a>
+              </li>
+              <li>
+                <a href="category.html">Services</a>
+              </li>
+              <li>
+                <a href="about.html">Our Story</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="footer-title">Our Events</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="#">Wedding</a>
+              </li>
+              <li>
+                <a href="#">Birthday</a>
+              </li>
+              <li>
+                <a href="#">Baby Shower</a>
+              </li>
+              <li>
+                <a href="#">Corporate Events</a>
+              </li>
+              <li>
+                <a href="#">Anniversary</a>
+              </li>
+              <li>
+                <a href="#">Engagement</a>
+              </li>
+              <li>
+                <a href="#">House Warming</a>
+              </li>
+              <li>
+                <a href="#">Funeral Service</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="footer-title">Our Services</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="#">Catering</a>
+              </li>
+              
+              <li>
+                <a href="#">Makeup & Styling
+</a>
+              </li>
+              
+              <li>
+                <a href="#">Rental Outfits
+</a>
+              </li>
+              <li>
+                <a href="#">Event Decoration & Styling
+</a>
+              </li>
+              <li>
+                <a href="#">Photography & Videography
+</a>
+              </li>
+              <li>
+                <a href="#">Music & Entertainment
+</a>
+              </li>
+              <li>
+                <a href="#">Furniture & Equipment
+
+</a>
+              </li>
+              
+              <li>
+                <a href="#">More
+</a>
+              </li>
+              
+
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-2 col-md-6 mb-4 ">
+            <h5 class="footer-title">Contact Us</h5>
+            <p class="footer-text">
+              📍 Kerala, India<br />
+              📧 support@eventura.com<br />
+              📞 +91 98765 43210
+            </p>
+
+            <!-- Social Icons -->
+            <div class="footer-social">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+            
+          </div>
+          </div>
+          </div>
+
+          <!-- Bottom bar -->
+             <div class="footer-bottom text-center">
+                    <p>© 2025 Eventura. All Rights Reserved.</p>
+
+             </div>
+      
+    </footer>
+
+     <!-- AOS Script -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

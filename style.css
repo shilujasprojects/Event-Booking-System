@@ -1,0 +1,183 @@
+/* Navbar Section */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+.navbar-nav a {
+        font-family: Cinzel;
+        margin-right: 30px;
+        font-size: Medium;
+        text-transform: uppercase;
+      }
+
+      .navbar-nav a:hover {
+        color: #e0bc74;
+      }
+
+      #book-now{
+       background-color: #d3b679;
+        color: #062036;
+        border: none;
+      }
+
+      #book-now:hover{  
+        background-color: #d6aa5f;
+        color: white;
+      }
+
+
+@media(max-width: 768px){
+  .nav-item{
+    margin-left: 10px;
+  }
+}
+
+/* Divider Section */
+
+
+      .divider{
+        display: flex;          /* makes the container a flexbox, allowing its children (the lines and text) to align horizontally in one row. */
+
+        align-items: center;      /* vertically centers the items (so the text is perfectly aligned with the lines). */
+
+        justify-content: center;
+        /* margin: 40px 0; */
+        
+    }
+
+    .divider span{
+        font-size: 42px;
+        font-weight: 530;
+        color: #062036;
+        font-family: Cinzel;
+    }
+
+    .divider::before,       /* the side lines :  creates two equal horizontal lines — one before and one after the text.*/
+    .divider::after {
+        content: "";            /* makes them appear (without content). */
+        flex: 1;        /* gives each line equal flexible width so both sides stretch evenly. */
+        border: 1px solid rgba(255, 247, 238, 0.5);
+        opacity: 0.85;
+  
+    }
+
+     /* :not(:empty) ensures the spacing only applies when there is text inside the divider (so you don’t get gaps if it’s empty). */
+
+    .divider:not(:empty)::before {
+        margin-right: 1em;      
+    }
+
+    .divider:not(:empty)::after {
+        margin-left: 1em;
+    }
+
+
+
+
+/* Footer Section */
+
+      .eventura-footer {
+        /* background-color: #041c32; */
+        background: linear-gradient(to bottom, #041c32, #031526);
+        
+        padding: 60px 0 0;
+        color: #dcdcdc;  
+              
+      }
+
+      .eventura-footer .container{
+        
+        padding-bottom: 60px;
+      }
+
+
+      .footer-logo{
+        font-family: Cinzel;
+        color: #e0bc74;
+        margin-bottom: 15px;
+        
+      }
+
+      .img-fluid-footer{
+  width: 200px;
+  height: 80px;
+  padding-right: 50px;
+}
+
+@media(max-width: 576px){
+  .img-fluid-footer{
+  padding-right: 80px;
+  }
+}
+
+
+      .footer-text{
+        font-size: 15px;
+        line-height: 26px;
+        font-family: Cinzel;
+        /* padding-right: 16px; adjust as needed */
+
+        
+      }
+
+      .footer-title{
+        font-family: Cinzel;
+        color: #e0bc74;
+        margin-bottom: 15px;
+      }
+
+      .footer-links{
+        font-family: cinzel;
+        list-style: none;
+        padding: 0;
+      }
+
+      .footer-links li {
+        margin-bottom: 8px;
+       
+        }
+
+        .footer-links li a {
+             color: #dcdcdc;
+             text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: #e0bc74;
+            padding-left: 5px;
+        }
+
+        .footer-social a {
+            color: #dcdcdc;
+            font-size: 18px;
+            margin-right: 12px;
+            transition: 0.3s;
+        }
+
+        .footer-social a:hover {
+            color: #e0bc74;
+        }
+
+        .footer-bottom {
+            background-color: #031526;
+            padding: 15px 0;
+            margin-top: 30px;
+        }
+
+        .footer-bottom p {
+            margin: 0;
+            font-size: 14px;
+        }
+
+      @media screen and (max-width: 768px) {
+        .eventura-footer{
+          padding : 80px 0 0;
+        }
+
+        .eventura-footer .container{
+        padding-bottom: 0;
+      }
+
+      }

@@ -1,0 +1,873 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About</title>
+    <link rel="shortcut icon" type="image/png" href="images/logo2.png" />
+
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- Bootstrap Icons -->
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+    <!-- AOS  -->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+
+    <style type="text/css">
+        body {
+        margin: 0;
+        font-family: "Segoe UI", Arial, sans-serif;
+        color: white;
+        background-color: #f1d49b;
+    }
+
+      
+
+      section{
+        color: #062036;
+        margin-top: 70px;
+        margin-bottom: 0;
+      }
+      
+
+    .about-title{
+        text-transform: capitalize;
+        font-size: 50px;
+        font-family: Cinzel;
+    }
+
+    .about-subtitle{
+        padding-top: 20px;
+        font-size: 20px;
+        line-height: 1.75;
+        font-style: italic;
+    }
+
+    @media (max-width: 768px){
+      .about-title{
+        font-size: 35px;
+      }
+      .about-subtitle{
+        font-size: 10px;
+        
+      }
+    }
+
+.about-section {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 500px;
+  padding: 0 75px;
+  margin-top: 70px;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(15, 34, 51, 0.95) 0%,
+      rgba(15, 34, 51, 0.85) 40%,
+      rgba(15, 34, 51, 0.3) 60%,
+      transparent 100%
+    ),
+    url("images/about_part_1.png") center center / cover no-repeat;
+}
+
+    .content {
+        max-width: 600px;
+        
+    }
+
+    .content h1 {
+        font-size: 70px;
+        font-weight: 700;
+        margin-bottom: 1rem;
+        color: #d3b679;
+        font-family: Cinzel;
+    }
+
+    .content p {
+        font-size: 1.25rem;
+        line-height: 1.8;
+        color: #dce4eb;
+        font-style: italic;
+    }
+
+    .content2 img {
+      border-radius: 20px;
+      max-height: 300px;
+    }
+
+    
+
+
+@media (max-width: 768px) {
+
+  .about-section{
+    padding: 0 40px;
+  }
+  
+  .content { 
+    margin-top: 20px;
+  }
+  
+
+  .content h1 {
+    font-size: 42px;
+  }
+
+  .content p{
+    margin-top: 20px;
+    max-width: 350px;
+  }
+}
+
+@media (max-width: 576px){
+  .about-section{
+    padding:0 20px; 
+    background:
+      linear-gradient(
+        to bottom,
+        rgba(15, 34, 51, 0.75) 0%,
+        rgba(15, 34, 51, 0.4) 50%,
+        transparent 100%
+      ),
+      url("images/about_part_1.png") center top / cover no-repeat;
+  }
+  .content h1 {
+        font-size: 32px;
+      }
+
+      .content p{
+        max-width: 200px;
+      }
+  }
+
+    /* Our Mission section */
+
+    /* Mission & Vision Cards – SOLID (NO GLASS) */
+
+.mission-row {
+  align-items: stretch;
+}
+
+.mission-card {
+  height: 100%;
+  min-height: 280px;
+
+  background-color: #fff7ee;
+  border-radius: 28px;
+  border: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.mission-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.15);
+  transition: 0.5 ease-in-out;
+}
+
+/* Icon */
+.mission-card i {
+  font-size: 46px;
+  color: #d3b679;
+}
+
+/* Title */
+.mission-card .card-title {
+  color: #062036;
+  font-size: 1.5rem;
+}
+
+/* Text */
+.mission-card .card-text {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #062036;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .mission-card {
+    padding: 2.5rem;
+  }
+
+  .mission-card i {
+    font-size: 36px;
+  }
+
+  .mission-card .card-title {
+    font-size: 1.2rem;
+  }
+}
+
+/* Why choose eventura  */
+
+
+    .card{
+         background-color: #fff7ee;
+         border-radius: 25px;
+         margin-bottom: 50px;
+         
+    }
+
+    .card-icon1{
+      background-color: #fff7ee;
+      opacity: 0.85;
+    }
+
+    .card:hover{
+       transform: translateY(-8px);
+        transition: 0.3 ease-in;
+        opacity: 0.75;
+    }
+
+    .card i{
+        font-size: 50px;
+        color: #d3b679 ;
+    }
+    .eye{
+        position: relative;
+        font-size: 16px;
+        top: 9px;
+    }
+  
+    .card-para{
+        font-size: 18px;
+        
+    }
+
+    .card-para span{
+        font-size: 30px;
+        color: #062036;
+    }
+
+    
+
+    @media(max-width: 768px){
+      .divider span{
+        max-width: 100%;
+        font-size: 25px;
+        font-weight: 520;
+      }
+      .card{
+        margin-bottom: 15px;
+      }
+
+      .card-para{
+        font-size: 16px;
+      }
+
+    }
+
+
+
+
+    
+   /*Banner section  */
+
+  .about-section2 {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  min-height: 380px;
+  padding: 0 75px;
+  opacity: 0.9;
+  color:#d3b679;
+  font-family: cinzel;
+  background: linear-gradient(
+      to right,
+      rgba(15, 34, 51, 0.95) 30%,
+      rgba(15, 34, 51, 0.85) 40%,
+      rgba(15, 34, 51, 0.3) 60%,
+      transparent 70%
+    ),
+    url("images/image.png") center / cover no-repeat;
+}
+
+
+.about-section2 p{
+    color: #ccc;
+    font-family: sans-serif;
+    
+
+}
+
+.about-section2 button{
+    border: none;
+    color: black;
+    background-color: #e0bc74;
+    border-radius: 8px;
+    padding: 7px;
+    width: 50%;
+    font-size: 17px;
+    font-family: sans-serif;
+}
+
+.about-section2 button:hover{
+    background-color: #d6aa5f;
+}
+
+@media (max-width: 768px){
+  .about-section2{
+    padding: 4%;
+    
+  }
+  .about-section2 p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+
+@media (max-width: 576px){
+  .about-section2{
+    padding: 8%;
+    
+  }
+
+  .about-section2 p{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+
+/* FAQ Section */
+
+.faq-glass-section {
+  background: linear-gradient(
+      135deg,
+      rgba(4, 28, 50, 0.95),
+      rgba(4, 28, 50, 0.85)
+    );
+   
+  color: #fff;
+}
+
+/* Title */
+.faq-title {
+  font-family: Cinzel;
+  color: #d3b679;
+  font-size: 2.5rem;
+}
+
+.faq-subtitle {
+  color: #dce4eb;
+  font-style: italic;
+}
+
+/* Glass Cards */
+.glass-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+/* Accordion Button */
+.accordion-button {
+  background: transparent;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+.accordion-button:not(.collapsed) {
+  color: #d3b679;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+/* Remove default arrow background */
+.accordion-button::after {
+  filter: invert(1);
+}
+
+/* Body */
+.accordion-body {
+  color: #e9edf1;
+  line-height: 1.7;
+}
+
+/* Remove default borders */
+.accordion-item {
+  border: none;
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+  .faq-title {
+    font-size: 1.9rem;
+  }
+}
+
+
+/* Footer Section */
+
+.custom-container {
+  max-width: 1200px;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 90px;
+  /* margin-right: 190px; */
+  padding: 0 15px; /* keep Bootstrap spacing */
+}
+
+      
+
+    </style>
+  </head>
+  <body>
+    <!-- Navbar section -->
+
+    <nav
+      class="navbar navbar-expand-lg navbar-dark fixed-top"
+      style="background-color: #062036"
+    >
+      <!-- rgb(13, 13, 58); -->
+
+      <!-- <img src="images/logo.png" style="width: 80px; height: 60px" alt="Logo" /> -->
+       <img src="images/logo2.png" style="width: 100px; height: 80px" alt="Logo" />
+      <h1
+        class="navbar-brand"
+        style="font-family: Cinzel; font-size: x-large; color: white"
+      >
+        EVENTURA
+      </h1>
+
+      <!-- mobile size (responsive hamburger icon invoking) -->
+
+      <button
+        type="button"
+        class="navbar-toggler"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarItems"
+        aria-controls="navbarItems"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarItems">
+        <ul class="navbar-nav hover-overlay ms-auto">
+          <li class="nav-item">
+            <a href="home.html" class="nav-link" aria-current="page">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="event.html" class="nav-link">Events</a>
+          </li>
+          <li class="nav-item">
+            <a href="category.html" class="nav-link">Services</a>
+          </li>
+          <li class="nav-item">
+            <a href="about.html" class="nav-link active">Our Story</a>
+          </li>
+          <li class="nav-item">
+            <a href="contact.html" class="nav-link">Contact</a>
+          </li>
+          <li class="nav-item">
+            <a
+              href="book-now.html"
+              class="btn btn-warning"
+              id="book-now"
+              >Book Now</a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+
+<!-- Banner Section -->
+
+<section class=" about-section">
+    <div class="content">
+      <h1>About Eventura</h1>
+      <p>
+        Eventura is your trusted partner in creating unforgettable moments.
+        From personal celebrations to professional events, we simplify
+        planning with elegance and reliability.
+      </p>
+    </div>
+  </section>
+
+  <!-- Who we are section -->
+
+  <section class="container content2">
+    <div class="row align-items-center">
+        <div class="col-md-8 " data-aos="fade-up-left" data-aos-duration="2000">
+            <h2 class="about-title">Who we are</h2>
+    <p class="about-subtitle">
+          Eventura is an all-in-one event booking platform designed to connect people with trusted vendors, creative planners, and seamless services. We believe every event—big or small—deserves perfect execution, and our goal is to make event planning simple, transparent, and stress-free from start to finish.
+        </p>
+        </div>
+        <div class="col-md-4 mt-lg-3 mt-md-5 "  data-aos="flip-right" data-aos-duration="2500">
+            <img src="images/about-part-2.png" alt="about 2" class="img-fluid">
+        </div>
+    </div>
+    </section>
+
+    <!-- Our mission and our vision -->
+
+    <section class="container">
+  <h2 class="text-center about-title">Our Mission & our Vision</h2>
+
+  <div class="row mt-5 mission-row g-3">
+    <div class="col-md-6 ">
+      <div class="card mission-card p-4 ">
+        <div class="d-flex align-items-center justify-content-center mb-3">
+          <i class="bi bi-bullseye"></i>
+          <h4 class="card-title ms-3 mb-0">Our Mission</h4>
+        </div>
+
+        <p class="card-text text-center">
+          To make event planning stress-free by providing reliable services,
+          transparent pricing, and effortless booking experiences.
+        </p>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card mission-card p-4">
+        <div class="d-flex align-items-center justify-content-center mb-3">
+          <i class="bi bi-stars"></i>
+          <h4 class="card-title ms-3 mb-0">Our Vision</h4>
+        </div>
+
+        <p class="card-text text-center">
+          To become the most trusted event booking platform that brings joy,
+          creativity, and confidence to every celebration.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+  <!-- Why choose eventura -->
+
+    <section class="container mt-5">
+        <div class="divider">
+            <span>Why Choose Eventura?</span>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-3 col-md-6">
+                <div class="card text-center card-icon1 p-3" data-aos="zoom-in-down" data-aos-duration="1500">
+                    <i class="bi bi-shield-check"></i>
+                    <h4 class="card-title">Trusted Vendors</h4>
+                    <div class="d-flex text-center px-4">
+                        <p class="card-para"><span class="icon-card">🎯</span> 500+&nbsp;Events Managed</p>
+                        <h4></h4>
+                    </div>
+              </div>
+                </div>
+            
+            <div class="col-lg-3 col-md-6" >
+                 <div class="card text-center card-icon1 p-3" data-aos="zoom-in-down" data-aos-duration="1500">
+                    <i class="bi bi-calendar-plus"></i>
+                    <h4 class="card-title">Easy Booking</h4>
+                    <div class="d-flex text-center px-4">
+                        <p class="card-para"><span class="icon-card">📅</span> 200+&nbsp;Verified Vendors</p>
+                        <h4></h4>
+                    </div>
+              </div>
+
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="card text-center card-icon1 p-3" data-aos="zoom-in-down" data-aos-duration="1500">
+                    <i class="bi bi-people"></i>
+                    <h4 class="card-title">All Communities</h4>
+                    <div class="d-flex text-center px-4">
+                        <p class="card-para"><span class="icon-card">👥</span> 550+&nbsp;Happy Clients</p>
+                        <h4></h4>
+                    </div>
+
+            </div>
+           
+        </div>
+
+        <div class="col-lg-3 col-md-6">
+                <div class="card text-center card-icon1 p-3" data-aos="zoom-in-down" data-aos-duration="1500">
+                    <i class="bi bi-stars"></i>
+                    <h4 class="card-title">Premium Experience</h4>
+                    <div class="d-flex text-center px-4">
+                        <p class="card-para"><span class="icon-card">🕘</span> 24/7&nbsp;Support</p>
+                        <h4></h4>
+                    </div>
+
+            </div>
+           
+        </div>
+  </section>
+
+  <!-- FAQ Section -->
+  
+
+  <section class="faq-glass-section py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h2 class="faq-title">Frequently Asked Questions</h2>
+      <p class="faq-subtitle">
+        Clear your doubts before planning your perfect event with Eventura
+      </p>
+    </div>
+
+    <div class="accordion glass-accordion" id="glassFaq">
+
+      <!-- FAQ 1 -->
+      <div class="accordion-item glass-card">
+        <h2 class="accordion-header">
+          <button class="accordion-button" data-bs-toggle="collapse" data-bs-target="#gfaq1">
+            What types of events does Eventura manage?
+          </button>
+        </h2>
+        <div id="gfaq1" class="accordion-collapse collapse show">
+          <div class="accordion-body">
+            Eventura manages weddings, birthdays, baby showers, corporate events,
+            housewarming ceremonies, and funeral services with complete planning support.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 2 -->
+      <div class="accordion-item glass-card">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#gfaq2">
+            Can I customize my event services?
+          </button>
+        </h2>
+        <div id="gfaq2" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Yes! All services are fully customizable including décor, catering,
+            entertainment, and rituals based on your preferences.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 3 -->
+      <div class="accordion-item glass-card">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#gfaq3">
+            How early should I book my event?
+          </button>
+        </h2>
+        <div id="gfaq3" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            We recommend booking at least 2–4 weeks in advance. For weddings,
+            booking 2–3 months earlier ensures better vendor availability.
+          </div>
+        </div>
+      </div>
+
+      <!-- FAQ 4 -->
+      <div class="accordion-item glass-card">
+        <h2 class="accordion-header">
+          <button class="accordion-button collapsed" data-bs-toggle="collapse" data-bs-target="#gfaq4">
+            Does Eventura provide on-site support?
+          </button>
+        </h2>
+        <div id="gfaq4" class="accordion-collapse collapse">
+          <div class="accordion-body">
+            Yes. Our professional team ensures smooth coordination and support
+            throughout the event day.
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Banner Ready Section -->
+
+  <div class="about-section2">
+    <div class="banner-ready">
+      <h1>Ready to Plan Your Event? </h1>
+      <p>
+        Let Eventura turn your vison into reality.
+      </p>
+      <button type="button">Book an Event</button>
+    </div>
+  </div>
+
+
+  
+<!-- Footer Section -->
+
+    <footer class="eventura-footer">
+      <div class="custom-container">
+        <img src="images/logo2.png" class="img-fluid-footer" />
+        <div class="row">
+          
+          <!-- Brand Info -->
+          <div class="col-lg-4 col-md-6">
+            
+            <h3 class="footer-logo">EVENTURA</h3>
+            <p class="footer-text">
+              Eventura makes event planning simple, reliable, and stress-free. From joyful celebrations to meaningful ceremonies, we bring all services together in one trusted platform. With verified vendors, transparent pricing, and seamless coordination, Eventura helps you plan every detail with confidence, turning your vision into a smooth, memorable experience.
+            </p>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="footer-title">Quick Links</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="home.html">Home</a>
+              </li>
+              <li>
+                <a href="event.html">Events</a>
+              </li>
+              <li>
+                <a href="category.html">Services</a>
+              </li>
+              <li>
+                <a href="about.html">Our Story</a>
+              </li>
+              <li>
+                <a href="contact.html">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Services -->
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="footer-title">Our Events</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="#">Wedding</a>
+              </li>
+              <li>
+                <a href="#">Birthday</a>
+              </li>
+              <li>
+                <a href="#">Baby Shower</a>
+              </li>
+              <li>
+                <a href="#">Corporate Events</a>
+              </li>
+              <li>
+                <a href="#">Anniversary</a>
+              </li>
+              <li>
+                <a href="#">Engagement</a>
+              </li>
+              <li>
+                <a href="#">House Warming</a>
+              </li>
+              <li>
+                <a href="#">Funeral Service</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="col-lg-2 col-md-6 mb-4">
+            <h5 class="footer-title">Our Services</h5>
+            <ul class="footer-links">
+              <li>
+                <a href="#">Catering</a>
+              </li>
+              
+              <li>
+                <a href="#">Makeup & Styling
+</a>
+              </li>
+              
+              <li>
+                <a href="#">Rental Outfits
+</a>
+              </li>
+              <li>
+                <a href="#">Event Decoration & Styling
+</a>
+              </li>
+              <li>
+                <a href="#">Photography & Videography
+</a>
+              </li>
+              <li>
+                <a href="#">Music & Entertainment
+</a>
+              </li>
+              <li>
+                <a href="#">Furniture & Equipment
+
+</a>
+              </li>
+              
+              <li>
+                <a href="#">More
+</a>
+              </li>
+              
+
+            </ul>
+          </div>
+
+          <!-- Contact -->
+          <div class="col-lg-2 col-md-6 mb-4 ">
+            <h5 class="footer-title">Contact Us</h5>
+            <p class="footer-text">
+              📍 Kerala, India<br />
+              📧 support@eventura.com<br />
+              📞 +91 98765 43210
+            </p>
+
+            <!-- Social Icons -->
+            <div class="footer-social">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+
+            
+          </div>
+          </div>
+          </div>
+
+          <!-- Bottom bar -->
+             <div class="footer-bottom text-center">
+                    <p>© 2025 Eventura. All Rights Reserved.</p>
+
+             </div>
+      
+    </footer>
+
+
+    
+<!-- AOS Script -->
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
