@@ -1,0 +1,10 @@
+node_modules/
+dist/
+build/
+*.log
+*.zip
+*.rar
+*.mp4
+*.jpg
+*.png
+.env
